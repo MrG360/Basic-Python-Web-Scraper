@@ -31,7 +31,7 @@ def send_mail():
     server.starttls() # encrpyt our connection
     server.ehlo()
 
-    server.login('gauravkumar.gk818@gmail.com','bgbxxuhxmeqtexnj') # This password is app password generated to act as gmail password through google 
+    server.login('gauravkumar.gk818@gmail.com','googleapppassword') # This password is app password generated to act as gmail password through google. You have to generate using app password gmail
 
     subject = 'Price fell down!!'
     body='Check the amazon link for the item whose price went down https://www.amazon.in/Redmi-Note-Pro-Interstellar-Snapdragon/dp/B077PWBC78/ref=sr_1_1?crid=2SZKRTLGK9J8M&dchild=1&keywords=redmi+note+9+pro&qid=1606038677&sprefix=red%2Caps%2C338&sr=8-1'
@@ -40,8 +40,8 @@ def send_mail():
 
     # sendmail is the function to send mail from the particular connection to who we want to send it
     server.sendmail(
-        'gauravkumar.gk818@gmail.com',
-        'firedragongk98@gmail.com',
+        'from', #from is to be replaced by the person who wants to send the mail
+        'to', # to will be replaced by the person who will recieve the mail
         msg
     )
     print('Hey! Email has been sent')
